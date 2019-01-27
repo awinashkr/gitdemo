@@ -10,4 +10,10 @@
    10  git init
    11  vi linuxcmd.txt
    12  history
+-----------------git command-----
+ 15 git status
+   16  git add linuxcmd.txt
+   17  git status
+   18  git commit -m "my first commit"
+   19  git status
 
