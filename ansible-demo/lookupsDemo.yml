@@ -5,3 +5,10 @@
         msg="Population of Mumbai is {{lookup('csvfile', 'Mumbai file=city-data.csv delimiter=, col=2')}}"
 
 
+    - set_fact:
+        printline: "Po
+   - lineinfile:
+        path: /opt/git
+        state: present
+       line: "{{ msg }}"   
+

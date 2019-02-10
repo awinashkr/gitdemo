@@ -1,0 +1,19 @@
+---
+- hosts: localhost
+  tasks: 
+    - debug:
+        msg="Population of Mumbai is {{lookup('csvfile', 'Mumbai file=city-data.csv delimiter=, col=2')}}"
+
+
+    - set_fact:
+        printline: "Population of Mumbai is {{lookup('csvfile', 'Mumbai file=city-data.csv delimiter=, col=2')}}"
+
+    - debug: var=printline
+
+    - lineinfile:
+        path: /opt/gitdemo/ansible_demo/lookup_plugin_out.out
+        state: prsent
+        line: "{{ printline }}"
+        create: yes
+...
+
