@@ -1,0 +1,14 @@
+---
+- hosts: all
+  user: ec2-user
+  sudo: true
+
+
+  tasks:
+    - name: Create User
+      user: name={{ item }} state=present
+      with_items:
+        - var1
+        - var2
+        - var3
+...
